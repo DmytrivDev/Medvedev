@@ -4,12 +4,8 @@ body {
   font-family: var(--ff);
   background-color: var(--cw);
   color: var(--cm);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5;
-}
-
-.overhide {
-  overflow: hidden;
 }
 
 .wrapper {
@@ -20,51 +16,68 @@ body {
   overflow: clip;
 }
 
+main,
 .main {
   flex: 1 1 auto;
-  padding-bottom: 4rem;
+}
+
+.pdMain {
+  main,
+  .main {
+    padding-bottom: 6.25rem;
+  }
 }
 
 [class*="__container"] {
-  max-width: 85rem;
-  padding: 0 1.875em;
+  max-width: 95rem;
+  padding: 0 1.875rem;
   margin: 0 auto;
-}
-
-/* --------- Adaptive desktop (1440px) --------- */
-
-@media screen and (max-width: 1440px) {
-  html,
-  body {
-    font-size: 1.1111vw;
+  &.wide {
+    max-width: 116.25rem;
   }
 }
 
-/* --------- Adaptive tablet (960px) --------- */
+/* --------- Adaptive desktop (1860px) --------- */
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1860px) {
   html,
   body {
-    font-size: 16px;
+    font-size: 0.8602vw;
+  }
+}
+
+/* --------- Adaptive tablet (768px) --------- */
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 2.083vw;
+  }
+
+  .pdMain {
+    main,
+    .main {
+      padding-bottom: 5.625rem;
+    }
   }
 
   [class*="__container"] {
-    padding: 0 0.9375em;
+    padding: 0 1.25rem;
   }
 }
 
 /* --------- Adaptive mobile (375px) --------- */
 
-@media screen and (max-width: 375px) {
-  [class*="__container"] {
-    padding: 0 0.625em;
-  }
-}
-
-/* --------- Adaptive mobile (320px) --------- */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 365px) {
   html,
   body {
-    font-size: 5vw;
+    font-size: 4.3835vw;
+  }
+
+  .pdMain {
+    main,
+    .main {
+      padding-bottom: 5rem;
+    }
   }
 }

@@ -1,9 +1,30 @@
 body {
   /* Colors */
-  --cm: #100405;
+  --cm: #060813;
   --cb: #000;
   --cw: #fff;
 
+  --ce: #efefef;
+
+  --cf: #3474bb;
+
+  --cg: #3ab54a;
+
+  --bg: linear-gradient(
+    -20deg,
+    #5190d5 0%,
+    #4f8fd3 10%,
+    #4a89cf 20%,
+    #4483ca 30%,
+    #3f7fc5 40%,
+    #3a78c0 50%,
+    #3572bb 60%,
+    #306eb6 70%,
+    #2b68b1 80%,
+    #2663ac 90%,
+    #225fa0 100%
+  );
+
   /* Fonts */
-  --ff: Arial, Helvetica, sans-serif;
+  --ff: "Mont", sans-serif;
 }
