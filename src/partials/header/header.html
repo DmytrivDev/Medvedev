@@ -2,20 +2,42 @@
   <div class="header__main">
     <div class="header__container wide">
       <div class="header__body">
-        <h2>Header</h2>
         <a href="./index.html" class="custom-logo-link">
           <img src="./img/icons/logo.svg" alt="Logo" />
         </a>
 
         <load src="partials/header/parts/navmenu.html" />
 
-        <load src="partials/header/parts/actions.html" />
+        <load src="partials/header/parts/social.html" />
+
+        <address class="header__address">
+          <a href="tel:+0978882525">
+            <span class="adr-ico">
+              <img src="./img/icons/tel.svg" alt="" />
+            </span>
+            <span class="adr-desc">(097) 888 2525</span>
+            <span class="adr-mob">Контакти</span>
+          </a>
+          <p>запис в клініку на прийом</p>
+        </address>
+
+        <a href="#" class="btn-def">Задайте питання</a>
+
+        <load src="partials/header/parts/lang.html" />
 
         <button type="button" class="burger" aria-label="Open menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
+      </div>
+    </div>
+
+    <div class="header__container-bottom wide">
+      <div class="header__bottom">
+        <load src="partials/header/parts/navmenu.html" />
+
+        <load src="partials/header/parts/lang.html" />
       </div>
     </div>
   </div>

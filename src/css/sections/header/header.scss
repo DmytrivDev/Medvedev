@@ -1,46 +1,103 @@
 .header {
-  // position: sticky;
-  // top: 0;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1100;
-  &__main {
-    position: relative;
-    z-index: 110;
-    background-color: var(--cw);
-  }
-  &__body {
-    .custom-logo-link {
+}
+.header__main {
+  position: relative;
+  z-index: 110;
+  background-color: var(--cw);
+  padding: 1.25rem 0;
+}
+.header__body {
+  display: flex;
+  align-items: center;
+  .custom-logo-link {
+    flex-shrink: 0;
+    margin-right: 3.4375rem;
+    display: block;
+    width: 3.75rem;
+    img {
+      width: 100%;
     }
   }
+  .btn-def {
+    flex-shrink: 0;
+  }
+}
+.header__address {
+  flex-shrink: 0;
+  margin-right: 2.5rem;
+  a {
+    .adr-mob {
+      display: none;
+    }
+  }
+}
+.header__container-bottom {
+  display: none;
 }
 
 .burger {
   display: none;
 }
 
-@media screen and (max-width: 960px) {
-  .header {
-    &__main {
+@media screen and (max-width: 768px) {
+  .header__main {
+  }
+  .header__body {
+    .custom-logo-link {
     }
-    &__body {
-      .custom-logo-link {
+  }
+  .header__address {
+    display: none;
+  }
+  .header__container-bottom {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .header__body {
+    .btn-def {
+      display: none;
+    }
+  }
+  .header__address {
+    display: block;
+    a {
+      .adr-ico {
+        display: none;
+      }
+      .adr-desc {
+        display: none;
+      }
+      .adr-mob {
+        display: block;
       }
     }
+    p {
+      display: none;
+    }
+  }
+  .header__container-bottom {
+    display: none;
   }
 
   .burger {
     display: block;
     flex-shrink: 0;
     position: relative;
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 1.5625rem;
+    height: 1.0625rem;
 
     span {
       position: absolute;
       left: 50%;
       top: 50%;
       width: 100%;
-      height: 0.1875rem;
+      height: 2px;
+      border-radius: 0.625rem;
       background-color: var(--cm);
       transform: translateX(-50%) translateY(-50%);
 
@@ -72,10 +129,5 @@
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .header {
   }
 }

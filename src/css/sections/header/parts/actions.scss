@@ -1,28 +1,99 @@
-.header__main {
-  .actions {
-    &__lang {
+.header__body {
+  .actions__soc {
+    flex-shrink: 0;
+    display: flex;
+    gap: 0.3125rem;
+    margin-right: 2.5rem;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.125rem;
+      height: 3.125rem;
+      border: 0.0625rem solid var(--cg);
+      border-radius: 50%;
+      background-color: rgba(58, 181, 74, 0.1);
+      transition: all 0.15s ease-in;
+      span {
+        width: 1.25rem;
+        img {
+          width: 100%;
+          filter: brightness(0) saturate(100%) invert(75%) sepia(7%)
+            saturate(6949%) hue-rotate(71deg) brightness(84%) contrast(69%);
+        }
+      }
+      &:hover {
+        opacity: 0.8;
+      }
     }
-    &__soc {
+  }
+  .actions__lang {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0 0.875rem;
+    margin-left: 2.5rem;
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 0 0.4375rem;
+      &.current-lang {
+        a {
+          color: var(--cm);
+        }
+        & > img {
+          display: block;
+        }
+      }
+      & > img {
+        display: none;
+        flex-shrink: 0;
+      }
+    }
+    a {
+      display: block;
+      color: rgba(6, 8, 19, 0.6);
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: normal;
+      transition: all 0.15s ease-in;
+      &:hover {
+        color: var(--cm);
+      }
     }
   }
 }
 
-@media screen and (max-width: 960px) {
-  .header__main {
-    .actions {
+@media screen and (max-width: 768px) {
+  .header__body {
+    .actions__soc {
+    }
+    .actions__lang {
+      display: none;
+    }
+  }
+
+  .header__bottom {
+    .actions__lang {
+    }
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .header__body {
+    .actions__soc {
       display: none;
     }
   }
 
   .mobmenu {
-    .actions {
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .mobmenu {
-    .actions {
+    .actions__soc {
+      a {
+        img {
+          filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+            saturate(2%) hue-rotate(310deg) brightness(102%) contrast(104%);
+        }
+      }
     }
   }
 }
