@@ -1,7 +1,7 @@
 import { toggle, up } from 'slide-element';
 
 function handleMenuItemChildren() {
-  const isMobile = () => window.innerWidth < 960;
+  const isMobile = () => window.innerWidth < 768;
 
   function handleMenu(menuElement) {
     const links = menuElement.querySelectorAll('.menu-item-has-children > a');
@@ -74,4 +74,21 @@ function handleMenuItemChildren() {
   if (footerList) handleMenu(footerList);
 }
 
-document.addEventListener('DOMContentLoaded', handleMenuItemChildren);
+function prevDefLinksHeadBot() {
+  const headerBottom = document.querySelector('.header__bottom');
+
+  if (headerBottom) {
+    const links = headerBottom.querySelectorAll('.menu-item-has-children > a');
+
+    links?.forEach(link => {
+      if (link.getAttribute('href') === '#') {
+        link.addEventListener('click', event => event.preventDefault());
+      }
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  handleMenuItemChildren();
+  prevDefLinksHeadBot();
+});

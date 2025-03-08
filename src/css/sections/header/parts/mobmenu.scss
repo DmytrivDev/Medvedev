@@ -4,7 +4,8 @@
 
 @media screen and (max-width: 365px) {
   .mobmenu {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: -100%;
     left: 0;
@@ -12,8 +13,8 @@
     z-index: 100;
     width: 100%;
     height: calc(100vh - 100%);
-    background-color: var(--cw);
     transform: translateY(-100%);
+    background-color: var(--cw);
 
     transition: all 0.35s ease-in;
     -webkit-transition: all 0.35s ease-in;
@@ -26,11 +27,17 @@
     }
 
     &__body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
       overflow-y: auto;
-      height: 100%;
+      padding: 3.125rem 0;
+      border-radius: 1.875rem 1.875rem 0 0;
+      background-color: var(--cg);
     }
     &__container {
-      height: 100%;
+      width: 100%;
+      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
     }
