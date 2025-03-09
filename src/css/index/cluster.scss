@@ -1,3 +1,55 @@
+.breadcrumbs {
+  padding: 2.1875rem 0;
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.2rem 1.125rem;
+    li {
+      display: flex;
+      align-items: center;
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--rce);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 2.5rem;
+
+      &:first-child {
+        overflow: visible;
+        text-overflow: clip;
+        min-width: auto;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+        span,
+        a {
+          color: var(--cm);
+          margin-right: 0;
+        }
+      }
+      span,
+      a {
+        margin-right: 1.125rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all 0.15s ease-in;
+      }
+      a {
+        &:hover {
+          color: var(--cm);
+        }
+      }
+      &::after {
+        content: "/";
+      }
+    }
+  }
+}
+
 .card-implem {
   position: relative;
   overflow: hidden;
@@ -45,6 +97,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .breadcrumbs {
+    padding: 1.5625rem 0;
+  }
+
   .card-implem {
     gap: 0 3.125rem;
     border-radius: 1.875rem;
@@ -67,6 +123,18 @@
 }
 
 @media screen and (max-width: 365px) {
+  .breadcrumbs {
+    padding: 1.25rem 0;
+    ul {
+      li {
+        span,
+        a {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
   .card-implem {
     flex-direction: column-reverse;
     align-items: start;

@@ -1,3 +1,7 @@
+.pd1 {
+  padding-top: 3.5rem;
+}
+
 .heading {
   padding-bottom: 1.875rem;
 }
@@ -71,6 +75,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .pd1 {
+    padding-top: 3.125rem;
+  }
+
   .heading {
     padding-bottom: 2.25rem;
   }
@@ -97,6 +105,10 @@
 }
 
 @media screen and (max-width: 365px) {
+  .pd1 {
+    padding-top: 2.25rem;
+  }
+
   .heading {
     padding-bottom: 2.125rem;
   }
