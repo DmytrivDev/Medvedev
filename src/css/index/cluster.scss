@@ -1,4 +1,6 @@
 .card-implem {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,15 +11,26 @@
   &.bg-cw {
     background-color: var(--cw);
   }
+  &:hover {
+    .btn-def {
+      opacity: 0.8;
+    }
+  }
 }
 .card-implem__content {
   .tl2 {
     width: fit-content;
     display: block;
     margin-bottom: 0.4375rem;
-    transition: all 0.15s ease-in;
-    &:hover {
-      opacity: 0.8;
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 3.125rem;
     }
   }
   .txt-def {
@@ -25,7 +38,6 @@
   }
 }
 .card-implem__img {
-  display: block;
   width: 14.75rem;
   img {
     width: 100%;
@@ -41,6 +53,9 @@
   .card-implem__content {
     .tl2 {
       margin-bottom: 0.625rem;
+      &::after {
+        border-radius: 1.875rem;
+      }
     }
     .txt-def {
       margin-bottom: 1.75rem;
