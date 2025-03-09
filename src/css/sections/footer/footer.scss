@@ -31,6 +31,7 @@
 }
 .footer__nav {
   padding-top: 1.1875rem;
+  min-height: 18.0625rem;
 }
 .footer__list {
   display: flex;
@@ -139,10 +140,135 @@
 
 @media screen and (max-width: 768px) {
   .footer {
+    padding: 3.75rem 0 2.5rem 0;
+  }
+  .footer__body {
+    grid-template-columns: 3.75rem 1fr;
+    gap: 2.5rem 4.375rem;
+
+    .footer__nav {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .footer__desc {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+  }
+  .footer__nav {
+    padding-top: 0.0938rem;
+    min-height: 13.125rem;
+  }
+  .footer__list {
+    gap: 0.625rem 1.875rem;
+    & > li,
+    & > .menu-item {
+      &.item-hidd {
+        display: none;
+      }
+      & > a {
+        font-size: 1rem;
+      }
+      &.menu-item-has-children {
+        & > ul,
+        & > .sub-menu {
+          left: -1.875rem;
+          transform: translateY(1.1875rem);
+          padding: 1.25rem 1.875rem;
+          max-width: 17.5rem;
+          a {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    gap: 0.9375rem;
+    padding-top: 2.6875rem;
+    & > p {
+      font-size: 0.75rem;
+    }
+  }
+  .footer__btns {
+    gap: 0.9375rem;
   }
 }
 
 @media screen and (max-width: 365px) {
   .footer {
+    padding: 3.125rem 0 2.1875rem 0;
+  }
+  .footer__body {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    .custom-logo-link {
+      margin: 0 auto;
+      margin-bottom: 2.8125rem;
+    }
+
+    .custom-logo-link,
+    .footer__nav,
+    .footer__desc {
+      grid-area: auto;
+    }
+  }
+  .footer__nav {
+    padding-top: 0;
+    min-height: auto;
+    margin-bottom: 1.5rem;
+  }
+  .footer__list {
+    gap: 1.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    & > li,
+    & > .menu-item {
+      &.item-hidd {
+        display: none;
+      }
+      & > a {
+        text-align: center;
+        font-size: 1.3125rem;
+      }
+      &.menu-item-has-children {
+        & > ul,
+        & > .sub-menu {
+          color: var(--cw);
+          position: static;
+          top: auto;
+          left: auto;
+          transform: translateY(0);
+          padding: 0.9375rem 0 0 0;
+          background-color: transparent;
+          border: none;
+          border-radius: 0;
+          max-width: 100%;
+          &::before {
+            content: none;
+          }
+          a {
+            text-align: center;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    gap: 2rem 0.9375rem;
+    padding-top: 1.75rem;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+  .footer__btns {
+    gap: 0.625rem;
+    .btn-def {
+      padding: 0.8125rem 1.25rem;
+      span {
+        width: 0.75rem;
+      }
+    }
   }
 }
