@@ -1,4 +1,9 @@
-.tl1 {
+.heading {
+  padding-bottom: 1.875rem;
+}
+
+.tl1,
+.tl2 {
   font-weight: 700;
   &.cw {
     color: var(--cw);
@@ -6,6 +11,9 @@
 }
 .tl1 {
   font-size: 2.5rem;
+}
+.tl2 {
+  font-size: 1.625rem;
 }
 
 .txt-def {
@@ -63,8 +71,15 @@
 }
 
 @media screen and (max-width: 768px) {
+  .heading {
+    padding-bottom: 2.25rem;
+  }
+
   .tl1 {
     font-size: 1.875rem;
+  }
+  .tl2 {
+    font-size: 1.3125rem;
   }
 
   .txt-def {
@@ -82,8 +97,15 @@
 }
 
 @media screen and (max-width: 365px) {
+  .heading {
+    padding-bottom: 2.125rem;
+  }
+
   .tl1 {
     font-size: 1.5rem;
+  }
+  .tl2 {
+    font-size: 1.125rem;
   }
 
   .btn-def {

@@ -1,0 +1,23 @@
+.implem {
+  padding: 5.625rem 0 6.25rem 0;
+}
+.implem__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .implem {
+    padding: 5rem 0 5.625rem 0;
+  }
+  .implem__cards {
+    gap: 1.25rem 0;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .implem {
+    padding: 4.375rem 0 5rem 0;
+  }
+}

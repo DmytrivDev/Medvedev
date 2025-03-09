@@ -72,21 +72,6 @@ function handleMenuItemChildren() {
   if (mobMenu) handleMenu(mobMenu);
 }
 
-function prevDefLinksHeadBot() {
-  const headerBottom = document.querySelector('.header__bottom');
-
-  if (headerBottom) {
-    const links = headerBottom.querySelectorAll('.menu-item-has-children > a');
-
-    links?.forEach(link => {
-      if (link.getAttribute('href') === '#') {
-        link.addEventListener('click', event => event.preventDefault());
-      }
-    });
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   handleMenuItemChildren();
-  prevDefLinksHeadBot();
 });
