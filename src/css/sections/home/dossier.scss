@@ -1,0 +1,53 @@
+.dossier__body {
+  display: flex;
+  align-items: start;
+  gap: 0 5.625rem;
+}
+.dossier__content {
+  .tl1 {
+    margin-bottom: 1.25rem;
+  }
+  .txt-def {
+    margin-bottom: 2.875rem;
+  }
+}
+.dossier__img {
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 35.3125rem;
+  height: 34.375rem;
+  border-radius: 3.125rem;
+}
+
+@media screen and (max-width: 768px) {
+  .dossier__body {
+    gap: 0 2.25rem;
+  }
+  .dossier__content {
+    .txt-def {
+      margin-bottom: 2rem;
+    }
+  }
+  .dossier__img {
+    width: 18.125rem;
+    height: 25.375rem;
+    border-radius: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .dossier__content {
+    .txt-def {
+      margin-bottom: 1.375rem;
+    }
+  }
+  .dossier__body {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 2.8125rem 0;
+  }
+  .dossier__img {
+    width: 100%;
+    height: 23.9375rem;
+  }
+}

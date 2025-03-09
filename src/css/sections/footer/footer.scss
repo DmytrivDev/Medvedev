@@ -124,11 +124,6 @@
   .btn-def {
     span {
       transform: rotate(45deg);
-      width: 1rem;
-      transition: all 0.15s ease-in;
-      img {
-        width: 100%;
-      }
     }
     &:hover {
       span {
@@ -266,9 +261,6 @@
     gap: 0.625rem;
     .btn-def {
       padding: 0.8125rem 1.25rem;
-      span {
-        width: 0.75rem;
-      }
     }
   }
 }

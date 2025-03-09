@@ -9,6 +9,10 @@
 @import url('./index/elements.scss');
 @import url('./index/cluster.scss');
 
+/* Cards */
+@import url('./sections/cards/project.scss');
+@import url('./sections/cards/activ.scss');
+
 /* General */
 /* @import url('./sections/home/implem.scss'); */
 
@@ -21,6 +25,8 @@
 /* Home */
 @import url('./sections/home/hero.scss');
 @import url('./sections/home/implem.scss');
+@import url('./sections/home/dossier.scss');
+@import url('./sections/home/covers.scss');
 
 /* Project */
 /* @import url('./sections/project/project.scss'); */
