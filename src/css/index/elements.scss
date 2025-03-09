@@ -38,7 +38,8 @@
 }
 
 .tl1,
-.tl2 {
+.tl2,
+.tl3 {
   display: block;
   font-weight: 700;
   &.cw {
@@ -50,6 +51,9 @@
 }
 .tl2 {
   font-size: 1.625rem;
+}
+.tl3 {
+  font-size: 1.5rem;
 }
 
 .txt-def {
@@ -103,16 +107,17 @@
   }
 }
 
-.fltr-gr {
-  img {
-    filter: brightness(0) saturate(100%) invert(75%) sepia(7%) saturate(6949%)
-      hue-rotate(71deg) brightness(84%) contrast(69%);
-  }
-}
-.fltr-wh {
-  img {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%)
-      hue-rotate(310deg) brightness(102%) contrast(104%);
+.link-def {
+  width: fit-content;
+  display: block;
+  color: var(--cg);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: all 0.15s ease-in;
+  &:hover {
+    text-decoration-line: underline;
+    text-underline-position: from-font;
   }
 }
 
@@ -136,7 +141,8 @@
   .tl1 {
     font-size: 1.875rem;
   }
-  .tl2 {
+  .tl2,
+  .tl3 {
     font-size: 1.3125rem;
   }
 
@@ -173,7 +179,8 @@
   .tl1 {
     font-size: 1.5rem;
   }
-  .tl2 {
+  .tl2,
+  .tl3 {
     font-size: 1.125rem;
   }
 
@@ -188,5 +195,9 @@
     &.size-min {
       padding: 0.8125rem 1.5rem;
     }
+  }
+
+  .link-def {
+    font-size: 1rem;
   }
 }

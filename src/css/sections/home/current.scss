@@ -1,0 +1,23 @@
+.current__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .current__cards {
+    gap: 1.25rem;
+
+    .card-news {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .current__cards {
+    gap: 1.5625rem;
+  }
+}
