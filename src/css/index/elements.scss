@@ -1,3 +1,24 @@
+.tl1 {
+  font-weight: 700;
+  &.cw {
+    color: var(--cw);
+  }
+}
+.tl1 {
+  font-size: 2.5rem;
+}
+
+.txt-def {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem 0;
+  font-weight: 600;
+  color: var(--rcy2);
+  &.rce {
+    color: var(--rce);
+  }
+}
+
 .btn-def {
   flex-shrink: 0;
   display: flex;
@@ -42,6 +63,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  .tl1 {
+    font-size: 1.875rem;
+  }
+
+  .txt-def {
+    font-size: 0.875rem;
+  }
+
   .btn-def {
     gap: 0 0.625rem;
     padding: 1.1875rem 2.125rem;
@@ -53,6 +82,10 @@
 }
 
 @media screen and (max-width: 365px) {
+  .tl1 {
+    font-size: 1.5rem;
+  }
+
   .btn-def {
     font-size: 0.875rem;
 

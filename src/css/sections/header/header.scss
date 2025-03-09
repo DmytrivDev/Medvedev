@@ -17,7 +17,7 @@
     flex-shrink: 0;
     margin-right: 3.4375rem;
     display: block;
-    width: 3.75rem;
+    width: 3.75rem !important;
     img {
       width: 100%;
     }
@@ -104,7 +104,7 @@
   .header__body {
     min-height: 5.0625rem;
     .custom-logo-link {
-      width: 3.125rem;
+      width: 3.125rem !important;
     }
     .btn-def {
       display: none;

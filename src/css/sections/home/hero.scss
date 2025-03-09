@@ -1,14 +1,164 @@
 .hero {
+  position: relative;
   background: var(--bg);
   padding: 6.25rem 0;
+}
+.hero__bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero__body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: start;
+  gap: 4.375rem;
+}
+.hero__content {
+  padding-top: 8.125rem;
+  .tl1 {
+    margin-bottom: 1.25rem;
+  }
+  .txt-def {
+    margin-bottom: 3.75rem;
+  }
+}
+.hero__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5625rem;
+}
+.hero__gallery {
+  flex-shrink: 0;
+  width: 36.5625rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 0.9375rem;
+
+  .hero__img {
+    &:nth-child(1) {
+      div {
+        &:nth-child(1) {
+          height: 27.0625rem;
+        }
+        &:nth-child(2) {
+          height: 11.375rem;
+        }
+      }
+    }
+    &:nth-child(2) {
+      div {
+        &:nth-child(1) {
+          height: 15.875rem;
+        }
+        &:nth-child(2) {
+          height: 22.375rem;
+        }
+      }
+    }
+  }
+}
+.hero__img {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+  div {
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .hero {
+    padding: 9.0625rem 0 5.625rem 0;
+  }
+  .hero__body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero__content {
+    padding-top: 0;
+    .tl1 {
+      margin-bottom: 0.875rem;
+    }
+    .txt-def {
+      margin-bottom: 2.375rem;
+    }
+  }
+  .hero__gallery {
+    width: 100%;
+    gap: 0.625rem;
+
+    .hero__img {
+      &:nth-child(1) {
+        div {
+          &:nth-child(1) {
+            height: 22.9375rem;
+          }
+          &:nth-child(2) {
+            height: 9.8125rem;
+          }
+        }
+      }
+      &:nth-child(2) {
+        div {
+          &:nth-child(1) {
+            height: 13.75rem;
+          }
+          &:nth-child(2) {
+            height: 19rem;
+          }
+        }
+      }
+    }
+  }
+  .hero__img {
+    gap: 0.625rem;
   }
 }
 
 @media screen and (max-width: 365px) {
   .hero {
+    padding: 5.9375rem 0 5rem 0;
+  }
+  .hero__body {
+    gap: 3.75rem;
+  }
+  .hero__btns {
+    gap: 0.9375rem;
+  }
+  .hero__gallery {
+    gap: 0.5rem;
+
+    .hero__img {
+      &:nth-child(1) {
+        div {
+          &:nth-child(1) {
+            height: 15.0625rem;
+          }
+          &:nth-child(2) {
+            height: 6.3125rem;
+          }
+        }
+      }
+      &:nth-child(2) {
+        div {
+          &:nth-child(1) {
+            height: 8.8125rem;
+          }
+          &:nth-child(2) {
+            height: 12.5625rem;
+          }
+        }
+      }
+    }
+  }
+  .hero__img {
+    gap: 0.5rem;
   }
 }
