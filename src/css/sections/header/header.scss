@@ -107,6 +107,10 @@
 @media screen and (max-width: 365px) {
   .header__main {
     border-bottom: 0.0625rem solid var(--rce2);
+    transition: all 0.15s ease-in;
+    &.isOpened {
+      border-color: transparent;
+    }
   }
   .header__body {
     min-height: 5.0625rem;

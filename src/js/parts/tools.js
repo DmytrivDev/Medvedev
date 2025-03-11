@@ -3,13 +3,36 @@ function prevDefLinksHeadBot() {
   const headerBottom = document.querySelector('.header__bottom');
 
   if (headerBottom) {
-    const links = headerBottom.querySelectorAll('.menu-item-has-children > a');
+    const menuItems = headerBottom.querySelectorAll('.menu-item-has-children');
 
-    links?.forEach(link => {
+    menuItems?.forEach(menuItem => {
+      const link = menuItem.querySelector('& > a');
+
       if (link.getAttribute('href') === '#') {
-        link.addEventListener('click', event => event.preventDefault());
+        link.addEventListener('click', event => {
+          event.preventDefault();
+
+          menuItem.classList.toggle('isOpened');
+
+          menuItems.forEach(otherItem => {
+            if (otherItem !== menuItem) {
+              otherItem.classList.remove('isOpened');
+            }
+          });
+
+          document.addEventListener('click', handleOutsideClick);
+        });
       }
     });
+
+    function handleOutsideClick(event) {
+      const isClickInsideMenu = headerBottom.contains(event.target);
+
+      if (!isClickInsideMenu || event.target.closest('.sub-menu a')) {
+        menuItems.forEach(menuItem => menuItem.classList.remove('isOpened'));
+        document.removeEventListener('click', handleOutsideClick);
+      }
+    }
   }
 }
 

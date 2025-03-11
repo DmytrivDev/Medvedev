@@ -142,7 +142,7 @@
         &.menu-item-has-children {
           position: relative;
 
-          &:hover {
+          &.isOpened {
             & > a {
               opacity: 0.6;
               &::after {

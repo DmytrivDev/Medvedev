@@ -1,5 +1,6 @@
 import { lockScroll, unlockScroll } from './lockscroll.js';
 
+const headerMain = document.querySelector('.header__main');
 const burger = document.querySelector('.burger');
 const mobMenu = document.querySelector('.mobmenu');
 const mobMenuBody = document.querySelector('.mobmenu__body');
@@ -12,6 +13,7 @@ function toggleMenu() {
     isMenuOpened = !isMenuOpened;
     burger.classList.toggle('isOpened');
     mobMenu.classList.toggle('isOpened');
+    headerMain.classList.toggle('isOpened');
 
     if (isMenuOpened) {
       lockScroll(mobMenuBody);
@@ -26,6 +28,7 @@ function closeMenu() {
     isMenuOpened = false;
     burger.classList.remove('isOpened');
     mobMenu.classList.remove('isOpened');
+    headerMain.classList.toggle('isOpened');
     unlockScroll();
   }
 }

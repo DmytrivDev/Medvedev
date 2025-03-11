@@ -75,6 +75,11 @@
   }
   .card-activ__up {
     margin-bottom: 3.5625rem;
+    background-color: var(--cg);
+    &::after {
+      transform: rotate(45deg);
+      background-image: var(--vecUpWhite);
+    }
   }
 }
 

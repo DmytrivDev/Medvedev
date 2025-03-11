@@ -37,6 +37,7 @@
   }
 }
 .card-project__img {
+  flex-shrink: 0;
   width: 14.75rem;
   img {
     width: 100%;
