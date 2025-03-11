@@ -42,17 +42,11 @@
 /* Event */
 /* @import url('./sections/event/event.scss'); */
 
-/* Activity */
-/* @import url('./sections/activity/activity.scss'); */
-
 /* Work */
 /* @import url('./sections/work/work.scss'); */
 
-/* Contacts */
-/* @import url('./sections/contacts/contacts.scss'); */
-
 /* Error */
-/* @import url('./sections/error/error.scss'); */
+@import url('./sections/error/error.scss');
 
 /* Policy */
 /* @import url('./sections/policy/policy.scss'); */
