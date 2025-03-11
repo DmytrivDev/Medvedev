@@ -71,6 +71,7 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0 0.75rem;
   width: fit-content;
   text-align: center;
@@ -83,6 +84,18 @@
   padding: 1.3438rem 2.125rem;
   transition: all 0.15s ease-in;
 
+  &.btn-base {
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 1rem;
+      height: 1rem;
+      background-size: 1rem 1rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: all 0.15s ease-in;
+    }
+  }
   &.btn-ico {
     span {
       width: 1rem;
@@ -187,6 +200,13 @@
   .btn-def {
     font-size: 0.875rem;
 
+    &.btn-base {
+      &::after {
+        width: 0.75rem;
+        height: 0.75rem;
+        background-size: 0.75rem 0.75rem;
+      }
+    }
     &.btn-ico {
       span {
         width: 0.75rem;

@@ -15,7 +15,7 @@
 @import url('./sections/cards/news.scss');
 
 /* General */
-/* @import url('./sections/home/implem.scss'); */
+@import url('./sections/general/connect.scss');
 
 /* Header */
 @import url('./sections/header/header.scss');
