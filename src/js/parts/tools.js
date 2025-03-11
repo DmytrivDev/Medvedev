@@ -8,21 +8,19 @@ function prevDefLinksHeadBot() {
     menuItems?.forEach(menuItem => {
       const link = menuItem.querySelector('& > a');
 
-      if (link.getAttribute('href') === '#') {
-        link.addEventListener('click', event => {
-          event.preventDefault();
+      link.addEventListener('click', event => {
+        event.preventDefault();
 
-          menuItem.classList.toggle('isOpened');
+        menuItem.classList.toggle('isOpened');
 
-          menuItems.forEach(otherItem => {
-            if (otherItem !== menuItem) {
-              otherItem.classList.remove('isOpened');
-            }
-          });
-
-          document.addEventListener('click', handleOutsideClick);
+        menuItems.forEach(otherItem => {
+          if (otherItem !== menuItem) {
+            otherItem.classList.remove('isOpened');
+          }
         });
-      }
+
+        document.addEventListener('click', handleOutsideClick);
+      });
     });
 
     function handleOutsideClick(event) {

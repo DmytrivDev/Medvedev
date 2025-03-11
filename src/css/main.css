@@ -37,7 +37,7 @@
 /* @import url('./sections/about/about.scss'); */
 
 /* News */
-/* @import url('./sections/news/news.scss'); */
+@import url('./sections/news/news.scss');
 
 /* Event */
 /* @import url('./sections/event/event.scss'); */
