@@ -20,6 +20,18 @@
     margin-bottom: 1.5rem;
   }
 }
+.connect__mess {
+  .btn-base {
+    &::after {
+      background-image: var(--icoTgWhite);
+    }
+    &:hover {
+      &::after {
+        background-image: var(--icoTgGreen);
+      }
+    }
+  }
+}
 .connect__soc {
   display: flex;
   gap: 0.3125rem;
@@ -238,6 +250,11 @@
       background-image: var(--vecUpGreen);
       transform: rotate(45deg);
     }
+    &:hover {
+      &::after {
+        background-image: var(--vecUpWhite);
+      }
+    }
   }
 }
 .checkbox__def {
@@ -280,7 +297,7 @@
       background-size: 1rem 1rem;
       background-position: center center;
       background-repeat: no-repeat;
-      background-image: var(--vecCheck);
+      background-image: var(--vecCheckGreen);
       transition: all 0.15s ease-in;
       opacity: 0;
     }

@@ -13,7 +13,9 @@
   }
   &:hover {
     .btn-def {
-      opacity: 0.8;
+      background-color: var(--cw);
+      border-color: var(--cg);
+      color: var(--cg);
     }
   }
 }
