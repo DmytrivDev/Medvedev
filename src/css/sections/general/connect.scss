@@ -108,8 +108,6 @@
 
   .btn-def {
     width: 100%;
-    .txt-desc {
-    }
     .txt-mob {
       display: none;
     }
@@ -212,6 +210,12 @@
   font-weight: 600;
   line-height: 1.6;
   transition: all 0.15s ease-in;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    box-shadow: 0 0 0 62.5rem var(--cw) inset;
+  }
 
   &:focus,
   &:not(:placeholder-shown) {
