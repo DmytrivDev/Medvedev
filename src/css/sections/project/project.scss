@@ -1,0 +1,35 @@
+.project {
+  .sechero__body {
+    gap: 0.875rem 7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    .sechero__body {
+      gap: 0.8125rem 1.5625rem;
+    }
+
+    .sechero__img {
+      height: 17rem;
+    }
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .project {
+    .sechero__body {
+      gap: 0.8125rem 0;
+
+      .sechero__content,
+      .sechero__addition,
+      .sechero__img {
+        grid-area: auto;
+      }
+    }
+
+    .sechero__img {
+      margin-top: 1.6875rem;
+    }
+  }
+}

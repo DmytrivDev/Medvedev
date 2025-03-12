@@ -18,6 +18,7 @@
 
 /* General */
 @import url('./sections/general/connect.scss');
+@import url('./sections/general/sechero.scss');
 
 /* Header */
 @import url('./sections/header/header.scss');
@@ -33,7 +34,7 @@
 @import url('./sections/home/current.scss');
 
 /* Project */
-/* @import url('./sections/project/project.scss'); */
+@import url('./sections/project/project.scss');
 
 /* About */
 @import url('./sections/about/hobby.scss');
