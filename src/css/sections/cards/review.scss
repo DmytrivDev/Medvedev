@@ -1,0 +1,134 @@
+.reviewer__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+.card-review {
+  position: relative;
+  border-radius: 1.25rem;
+  background-color: var(--cw);
+  min-height: 17.8125rem;
+  width: 100%;
+  max-width: calc((100% - 4 * 0.625rem) / 5);
+  padding: 9.125rem 1.375rem 1.375rem 1.375rem;
+
+  &.bg-ce {
+    background-color: var(--ce);
+  }
+  &.up-size {
+    padding: 10.875rem 1.375rem 1.375rem 1.375rem;
+    .card-review__name {
+      font-size: 1.3125rem;
+    }
+  }
+}
+.card-review__img {
+  position: absolute;
+  z-index: 1;
+  top: 1.625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6.25rem;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.25rem;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.25rem;
+    max-width: 100%;
+    img {
+      max-height: 100%;
+    }
+  }
+}
+.card-review__name {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: all 0.15s ease-in;
+}
+a.card-review__name {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+  }
+  &:hover {
+    color: var(--cg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviewer__cards {
+    gap: 0.25rem;
+  }
+  .card-review {
+    min-height: 15rem;
+    max-width: calc((100% - 2 * 0.25rem) / 3);
+    padding: 8.125rem 1.375rem 1.375rem 1.375rem;
+
+    &.up-size {
+      padding: 9.625rem 1.375rem 1.375rem 1.375rem;
+      .card-review__name {
+        font-size: 1.125rem;
+      }
+    }
+  }
+  .card-review__img {
+    top: 1.25rem;
+    height: 5.9375rem;
+    padding: 0 1.6875rem;
+
+    span {
+      height: 5.9375rem;
+    }
+  }
+  .card-review__name {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .reviewer__cards {
+    gap: 0.625rem;
+  }
+  .card-review {
+    min-height: 9.875rem;
+    max-width: calc((100% - 1 * 0.625rem) / 2);
+    padding: 4.6875rem 1rem 1rem 1rem;
+
+    &.up-size {
+      padding: 5.5rem 1rem 1rem 1rem;
+      .card-review__name {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+  .card-review__img {
+    top: 0.5rem;
+    height: 3.75rem;
+    padding: 0 0.8125rem;
+
+    span {
+      height: 3.75rem;
+    }
+  }
+  .card-review__name {
+    font-size: 0.8125rem;
+    font-weight: 400;
+  }
+}

@@ -13,6 +13,8 @@
 @import url('./sections/cards/project.scss');
 @import url('./sections/cards/activ.scss');
 @import url('./sections/cards/news.scss');
+@import url('./sections/cards/review.scss');
+@import url('./sections/cards/place.scss');
 
 /* General */
 @import url('./sections/general/connect.scss');
@@ -34,7 +36,7 @@
 /* @import url('./sections/project/project.scss'); */
 
 /* About */
-/* @import url('./sections/about/about.scss'); */
+@import url('./sections/about/hobby.scss');
 
 /* News */
 @import url('./sections/news/news.scss');
@@ -47,9 +49,6 @@
 
 /* Error */
 @import url('./sections/error/error.scss');
-
-/* Policy */
-/* @import url('./sections/policy/policy.scss'); */
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
