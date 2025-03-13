@@ -125,12 +125,6 @@
   .btn-base {
     &::after {
       background-image: var(--vecUpWhite);
-      transform: rotate(45deg);
-    }
-    &:hover {
-      &::after {
-        transform: rotate(0);
-      }
     }
   }
 }

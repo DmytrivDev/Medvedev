@@ -7,7 +7,10 @@
   padding: 2.8125rem 2.8125rem 3.4375rem 2.8125rem;
   width: 100%;
   max-width: calc((100% - 3 * 0.9375rem) / 4);
+  transition: all 0.15s ease-in;
+
   &.bg-rch {
+    border-color: var(--cw);
     color: var(--cw);
     background-color: var(--rch);
 
@@ -15,12 +18,26 @@
       color: var(--rcy2);
     }
   }
-  &:hover {
-    .card-activ__up {
-      background-color: var(--cg);
-      &::after {
-        transform: rotate(45deg);
-        background-image: var(--vecUpWhite);
+
+  &.hasLink {
+    &.bg-rch {
+      &:hover {
+        background-color: transparent;
+        border-color: var(--cw);
+      }
+    }
+
+    &:hover {
+      border-color: var(--cg);
+      a.tl2 {
+        color: var(--cg);
+      }
+      .card-activ__up {
+        background-color: var(--cg);
+        &::after {
+          transform: rotate(90deg);
+          background-image: var(--vecUpWhite);
+        }
       }
     }
   }
@@ -29,6 +46,7 @@
     line-height: 1.2;
     width: fit-content;
     margin-bottom: 0.75rem;
+    transition: all 0.15s ease-in;
   }
   a.tl2 {
     &::after {
@@ -65,7 +83,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-image: var(--vecUpBlack);
-    transform: rotate(90deg);
+    transform: rotate(45deg);
     transition: all 0.15s ease-in;
   }
 }

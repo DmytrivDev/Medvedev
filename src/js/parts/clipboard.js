@@ -2,10 +2,14 @@ const copyBtns = document.querySelectorAll('.clipboard');
 
 copyBtns?.forEach(btn => {
   btn.addEventListener('click', event => {
-    const copyBox = event.target.closest('.copyBox');
+    if (btn.classList.contains('isCopy')) return;
 
-    if (copyBox) {
+    const copyBox = event.target.closest('.copyBox');
+    const textToCopy = btn.dataset.copy;
+
+    if (copyBox && textToCopy) {
       const copyElem = copyBox.querySelector('.copyElem');
+      const textDef = btn.textContent.trim();
 
       if (copyElem) {
         const textElem = copyElem.textContent.trim();
@@ -17,14 +21,16 @@ copyBtns?.forEach(btn => {
               copyBox.timer = null;
             }
 
-            copyBox.classList.add('isCopy');
+            btn.classList.add('isCopy');
+            btn.textContent = textToCopy;
 
             if (copyBox.timer) {
               clearTimeout(copyBox.timer);
             }
 
             copyBox.timer = setTimeout(() => {
-              copyBox.classList.remove('isCopy');
+              btn.textContent = textDef;
+              btn.classList.remove('isCopy');
               copyBox.timer = null;
             }, 1000);
           })

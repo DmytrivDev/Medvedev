@@ -5,20 +5,25 @@
   width: 100%;
   max-width: calc((100% - 2 * 1.875rem) / 3);
   &:hover {
+    .tl3 {
+      color: var(--cg);
+    }
     .card-news__img {
       img {
         transform: scale(1.1);
       }
     }
     .link-def {
-      text-decoration-line: underline;
-      text-underline-position: from-font;
+      &::after {
+        opacity: 1;
+      }
     }
   }
   .tl3 {
     margin-bottom: 0.875rem;
     line-height: 1.4;
     width: fit-content;
+    transition: all 0.15s ease-in;
     &::after {
       content: "";
       position: absolute;

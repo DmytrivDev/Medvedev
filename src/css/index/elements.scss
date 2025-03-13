@@ -88,9 +88,8 @@
   padding: 1.3438rem 2.125rem;
   transition: all 0.15s ease-in;
   &:hover {
-    background-color: var(--cw);
-    border-color: var(--cg);
-    color: var(--cg);
+    background-color: var(--cg2);
+    border-color: var(--cg2);
   }
 
   &.btn-base {
@@ -137,6 +136,7 @@
 }
 
 .link-def {
+  position: relative;
   width: fit-content;
   display: block;
   color: var(--cg);
@@ -144,9 +144,21 @@
   font-weight: 600;
   line-height: 1.6;
   transition: all 0.15s ease-in;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0.1875rem;
+    left: 0;
+    width: 100%;
+    height: 0.0625rem;
+    background-color: var(--cg);
+    opacity: 0;
+    transition: all 0.15s ease-in;
+  }
   &:hover {
-    text-decoration-line: underline;
-    text-underline-position: from-font;
+    &::after {
+      opacity: 1;
+    }
   }
 }
 

@@ -10,15 +10,16 @@
       padding: 1.25rem 1.875rem;
       border-radius: 6.25rem;
       background-color: var(--ce);
+      border: 0.0625rem solid var(--ce);
       transition: all 0.15s ease-in;
       &:hover {
-        color: var(--cw);
-        background-color: var(--cg);
+        border-color: var(--cg);
       }
 
       &.checked {
         color: var(--cw) !important;
         background-color: var(--cg) !important;
+        border-color: var(--cg) !important;
       }
 
       .facetwp-counter {

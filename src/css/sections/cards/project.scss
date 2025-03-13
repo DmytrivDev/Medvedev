@@ -7,15 +7,18 @@
   gap: 0 3.75rem;
   border-radius: 3.125rem;
   background-color: var(--ce);
+  border: 0.0625rem solid var(--ce);
   padding: 3.375rem 5.625rem 3.75rem 3.75rem;
+  transition: all 0.15s ease-in;
   &.bg-cw {
     background-color: var(--cw);
+    border-color: var(--cw);
   }
   &:hover {
+    border-color: var(--cg);
     .btn-def {
-      background-color: var(--cw);
-      border-color: var(--cg);
-      color: var(--cg);
+      background-color: var(--cg2);
+      border-color: var(--cg2);
     }
   }
 }

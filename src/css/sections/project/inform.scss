@@ -32,23 +32,24 @@
     span {
       width: 1.5625rem;
       img {
+        transition: all 0.15s ease-in;
         width: 100%;
         filter: brightness(0) saturate(100%) invert(75%) sepia(7%)
           saturate(6949%) hue-rotate(71deg) brightness(84%) contrast(69%);
       }
     }
     &:hover {
-      opacity: 0.8;
+      background-color: var(--cg);
+      span {
+        img {
+          filter: brightness(0) saturate(100%) invert(98%) sepia(3%)
+            saturate(4%) hue-rotate(238deg) brightness(120%) contrast(100%);
+        }
+      }
     }
   }
 }
 .card-inform__contact {
-  &.isCopy {
-    a {
-      opacity: 1 !important;
-      color: var(--cg) !important;
-    }
-  }
   a {
     display: block;
     width: fit-content;
@@ -62,9 +63,11 @@
   }
   button {
     color: var(--cg);
-    text-decoration-line: underline;
-    text-underline-position: from-font;
     transition: all 0.15s ease-in;
+    &.isCopy {
+      text-decoration-line: underline;
+      text-underline-position: from-font;
+    }
     &:hover {
       opacity: 0.8;
     }

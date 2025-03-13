@@ -11,14 +11,23 @@
   width: 100%;
   max-width: calc((100% - 4 * 0.625rem) / 5);
   padding: 9.125rem 1.375rem 1.375rem 1.375rem;
+  border: 0.0625rem solid var(--cw);
+  transition: all 0.15s ease-in;
 
   &.bg-ce {
     background-color: var(--ce);
+    border-color: var(--ce);
   }
   &.up-size {
     padding: 10.875rem 1.375rem 1.375rem 1.375rem;
     .card-review__name {
       font-size: 1.3125rem;
+    }
+  }
+
+  &.hasLink {
+    &:hover {
+      border-color: var(--cg);
     }
   }
 }
@@ -53,7 +62,6 @@
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
-  transition: all 0.15s ease-in;
 }
 a.card-review__name {
   &::after {
@@ -65,9 +73,6 @@ a.card-review__name {
     width: 100%;
     height: 100%;
     border-radius: 1.25rem;
-  }
-  &:hover {
-    color: var(--cg);
   }
 }
 
