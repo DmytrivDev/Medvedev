@@ -1,0 +1,144 @@
+.skills__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.card-skill {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background-color: var(--cd);
+  min-height: 15rem;
+  width: 100%;
+  max-width: calc((100% - 5 * 0.25rem) / 6);
+  padding: 3.125rem 1.25rem 1.25rem 1.25rem;
+  transition: all 0.15s ease-in;
+
+  &:hover {
+    background-color: var(--cw);
+    .card-skill__year {
+      top: 1.875rem;
+      .tl3 {
+        font-size: 1rem;
+      }
+    }
+    .card-skill__info {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.card-skill__year {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: all 0.15s ease-in;
+  .tl3 {
+    font-weight: 600;
+    transition: all 0.15s ease-in;
+  }
+}
+.card-skill__info {
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  z-index: 1;
+  line-height: 1.6;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 0.15s ease-in;
+  p {
+    word-break: break-word;
+    hyphens: auto;
+  }
+  a {
+    color: var(--cg);
+    text-decoration-line: underline;
+    text-underline-position: from-font;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills__cards {
+    gap: 0.1875rem;
+  }
+  .card-skill {
+    min-height: 11.25rem;
+    max-width: calc((100% - 3 * 0.1875rem) / 4);
+    padding: 2.8125rem 0.9375rem 0.9375rem 0.9375rem;
+
+    &.isOpened {
+      background-color: var(--cw) !important;
+      .card-skill__year {
+        top: 1.75rem !important;
+        .tl3 {
+          font-size: 0.75rem !important;
+        }
+      }
+      .card-skill__info {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+    }
+    &:hover {
+      background-color: var(--cd);
+      .card-skill__year {
+        top: 50%;
+        .tl3 {
+          font-size: 1.3125rem;
+        }
+      }
+      .card-skill__info {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  .card-skill__info {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .skills__cards {
+    gap: 0.125rem;
+  }
+  .card-skill {
+    min-height: 6.75rem;
+    max-width: calc((100% - 2 * 0.125rem) / 3);
+    padding: 1.25rem 0.375rem 0.375rem 0.375rem;
+
+    &.isOpened {
+      .card-skill__year {
+        top: 0.8125rem !important;
+        .tl3 {
+          font-size: 0.625rem !important;
+        }
+      }
+    }
+    &:hover {
+      .card-skill__year {
+        .tl3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .card-skill__year {
+    .tl3 {
+      font-size: 1rem;
+    }
+  }
+  .card-skill__info {
+    font-size: 0.625rem;
+  }
+}

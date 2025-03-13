@@ -34,6 +34,31 @@ function prevDefLinksHeadBot() {
   }
 }
 
+// toggleSkillCards ===========================
+function toggleSkillCards() {
+  const skillCards = document.querySelectorAll('.card-skill');
+
+  skillCards.forEach(card => {
+    card.addEventListener('click', event => {
+      const clickedCard = event.target.closest('.card-skill');
+
+      skillCards.forEach(card => {
+        if (card === clickedCard) {
+          card.classList.toggle('isOpened');
+        } else {
+          card.classList.remove('isOpened');
+        }
+      });
+
+      event.stopPropagation();
+    });
+  });
+
+  document.addEventListener('click', () => {
+    skillCards.forEach(card => card.classList.remove('isOpened'));
+  });
+}
+
 // setFooterNavMinHeight ===========================
 function setFooterNavMinHeight() {
   const footerNav = document.querySelector('.footer__nav');
@@ -66,4 +91,5 @@ window.addEventListener('resize', setFooterNavMinHeight);
 document.addEventListener('DOMContentLoaded', () => {
   prevDefLinksHeadBot();
   setFooterNavMinHeight();
+  toggleSkillCards();
 });

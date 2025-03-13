@@ -17,7 +17,13 @@
       <main class="main">
         <load src="partials/home/hero.html" />
         <load src="partials/home/implem.html" />
-        <load src="partials/home/dossier.html" />
+
+        <!-- secwrapp - обгортка для секцій (по дефолту bg білий, bg-cf та інші змінюють колір)  -->
+        <div class="secwrapp bg-cf">
+          <load src="partials/home/dossier.html" />
+          <load src="partials/home/covers.html" />
+        </div>
+
         <load src="partials/home/current.html" />
         <load src="partials/general/connect.html" />
       </main>
