@@ -46,7 +46,7 @@
 @import url('./sections/news/news.scss');
 
 /* Event */
-/* @import url('./sections/event/event.scss'); */
+@import url('./sections/event/event.scss');
 
 /* Work */
 /* @import url('./sections/work/work.scss'); */

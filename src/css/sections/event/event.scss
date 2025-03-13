@@ -1,0 +1,48 @@
+.event__body {
+  display: grid;
+  grid-template-columns: 1fr 31.875rem;
+  align-items: start;
+  gap: 0 3.75rem;
+}
+.event__main {
+}
+.event__actions {
+}
+.event__type {
+}
+.event__date {
+}
+.event__img {
+}
+.event__images {
+}
+.event__social {
+}
+.actions__soc {
+}
+.event__aside {
+  padding: 3.125rem 3.75rem 3.75rem 3.75rem;
+  margin-top: 0.6875rem;
+  border-radius: 3.125rem;
+  background-color: var(--ce);
+}
+
+.aside__tl {
+}
+.aside__cards {
+}
+.card-news {
+  max-width: 100%;
+  .tl3 {
+  }
+  .txt-def {
+  }
+  .link-def {
+  }
+  .btn-def {
+  }
+}
+.card-news__img {
+}
+.card-news__type {
+}
