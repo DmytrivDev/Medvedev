@@ -8,12 +8,11 @@
       display: flex;
       align-items: center;
       line-height: 1.6;
-      font-weight: 400;
       color: var(--rce);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      min-width: 2.5rem;
+      min-width: 5rem;
 
       &:first-child {
         overflow: visible;
@@ -68,4 +67,10 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 365px) {
 }

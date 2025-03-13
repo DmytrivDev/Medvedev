@@ -1,6 +1,4 @@
 .covers {
-  padding-top: 5.625rem;
-
   .tl1 {
     line-height: 1.4;
     span {
@@ -15,9 +13,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .covers {
-    padding-top: 5rem;
-  }
   .covers__cards {
     gap: 1.25rem;
   }
@@ -25,8 +20,6 @@
 
 @media screen and (max-width: 365px) {
   .covers {
-    padding-top: 4.375rem;
-
     .tl1 {
       span {
         font-size: 1.125rem;

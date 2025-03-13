@@ -1,0 +1,124 @@
+.inform__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5625rem;
+}
+.card-inform {
+  width: 100%;
+  max-width: calc((100% - 2 * 1.5625rem) / 3);
+  border-radius: 3.125rem;
+  background-color: var(--ce);
+  padding: 3.375rem 3.75rem 3.75rem 3.75rem;
+}
+.card-inform__tl {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.card-inform__soc {
+  display: flex;
+  gap: 0.3125rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.0625rem;
+    height: 4.0625rem;
+    border: 0.0625rem solid var(--cg);
+    border-radius: 50%;
+    background-color: rgba(58, 181, 74, 0.1);
+    transition: all 0.15s ease-in;
+    span {
+      width: 1.5625rem;
+      img {
+        width: 100%;
+        filter: brightness(0) saturate(100%) invert(75%) sepia(7%)
+          saturate(6949%) hue-rotate(71deg) brightness(84%) contrast(69%);
+      }
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.card-inform__contact {
+  &.isCopy {
+    a {
+      opacity: 1 !important;
+      color: var(--cg) !important;
+    }
+  }
+  a {
+    display: block;
+    width: fit-content;
+    font-size: 1.4375rem;
+    font-weight: 600;
+    margin-bottom: 0.125rem;
+    transition: all 0.15s ease-in;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  button {
+    color: var(--cg);
+    text-decoration-line: underline;
+    text-underline-position: from-font;
+    transition: all 0.15s ease-in;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inform__cards {
+    gap: 1.25rem;
+  }
+  .card-inform {
+    max-width: calc((100% - 1 * 1.25rem) / 2);
+    border-radius: 1.875rem;
+    padding: 2.1875rem 2.25rem 2.25rem 2.25rem;
+    &:nth-child(3) {
+      max-width: 100%;
+    }
+  }
+  .card-inform__tl {
+    margin-bottom: 0.9375rem;
+  }
+  .card-inform__soc {
+    a {
+      width: 3.125rem;
+      height: 3.125rem;
+      span {
+        width: 1.25rem;
+      }
+    }
+  }
+  .card-inform__contact {
+    a {
+      font-size: 1.3125rem;
+      margin-bottom: 0;
+    }
+    button {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .card-inform__tl {
+    font-size: 1rem;
+  }
+  .card-inform {
+    max-width: 100%;
+    border-radius: 1.25rem;
+    padding: 1.5rem 1.875rem;
+  }
+  .card-inform__contact {
+    a {
+      font-size: 1.25rem;
+      margin-bottom: 0.125rem;
+    }
+  }
+}

@@ -35,6 +35,8 @@
 
 /* Project */
 @import url('./sections/project/project.scss');
+@import url('./sections/project/require.scss');
+@import url('./sections/project/inform.scss');
 
 /* About */
 @import url('./sections/about/hobby.scss');
