@@ -17,6 +17,8 @@
 @import url('./sections/cards/place.scss');
 
 /* General */
+@import url('./sections/general/modal.scss');
+@import url('./sections/general/sent.scss');
 @import url('./sections/general/connect.scss');
 @import url('./sections/general/sechero.scss');
 

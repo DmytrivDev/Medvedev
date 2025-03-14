@@ -1,0 +1,34 @@
+.sent__wrapp {
+  .txt-def {
+    color: var(--rce3);
+    margin-bottom: 2.25rem;
+  }
+}
+.sent__tl {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 0.625rem;
+}
+
+@media screen and (max-width: 768px) {
+  .sent__wrapp {
+    .txt-def {
+      margin-bottom: 1.875rem;
+    }
+  }
+  .sent__tl {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .sent__wrapp {
+    .txt-def {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .sent__tl {
+    font-size: 1.125rem;
+  }
+}
