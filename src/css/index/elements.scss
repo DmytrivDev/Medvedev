@@ -72,6 +72,8 @@
 }
 
 .btn-def {
+  position: relative;
+  z-index: 5;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -137,6 +139,7 @@
 
 .link-def {
   position: relative;
+  z-index: 5;
   width: fit-content;
   display: block;
   color: var(--cg);
