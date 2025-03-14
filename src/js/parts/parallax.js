@@ -26,7 +26,6 @@ function applyParallaxEffect() {
 
     // Расчёт смещения от центра экрана (-1 до 1)
     const offset = (sectionRect.top - headerHeight) / sectionRect.height;
-    console.log(offset);
 
     // Смещение в пределах [-4.375rem, 4.375rem] (по желанию можно увеличить)
     const shiftMultiplier = windowWidth < 768 ? 3 : 4.375;
