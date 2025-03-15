@@ -41,6 +41,7 @@
 @import url('./sections/project/inform.scss');
 
 /* About */
+@import url('./sections/about/experien.scss');
 @import url('./sections/about/skills.scss');
 @import url('./sections/about/hobby.scss');
 
