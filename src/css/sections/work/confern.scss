@@ -1,0 +1,157 @@
+.confern__body {
+  .tl1 {
+    text-align: center;
+    margin-bottom: 4.25rem;
+  }
+}
+.confern__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 41.25rem;
+}
+.confern__map {
+  width: 100%;
+  max-width: 100%;
+}
+
+.confern__splide {
+  width: 34.125rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .splide__slide {
+    border-radius: 1.25rem;
+    background-color: var(--cf);
+    padding: 1.5625rem 1.875rem;
+    color: var(--cw);
+
+    .txt-def {
+      color: var(--cw);
+    }
+  }
+
+  .arrows__prev,
+  .arrows__next {
+    position: absolute;
+    top: 50%;
+  }
+  .arrows__prev {
+    left: -1.25rem;
+    transform: translateY(-50%) translateX(-100%);
+  }
+  .arrows__next {
+    right: -1.25rem;
+    transform: translateY(-50%) translateX(100%);
+  }
+}
+.confern__name {
+  font-weight: 700;
+  margin-bottom: 0.4375rem;
+}
+
+.arrows__prev,
+.arrows__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cg);
+  border-radius: 50%;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  transition: all 0.15s ease-in;
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem 1rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: var(--vecUpWhite);
+  }
+  &:hover {
+    background-color: var(--cg2);
+  }
+}
+.arrows__prev {
+  &::before {
+    transform: rotate(-90deg);
+  }
+}
+.arrows__next {
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .confern {
+    padding-bottom: 10.3125rem;
+  }
+  .confern__body {
+    .tl1 {
+      margin-bottom: 2.875rem;
+    }
+  }
+  .confern__content {
+    min-height: 24.75rem;
+  }
+  .confern__map {
+    width: 54.8125rem;
+    max-width: 54.8125rem;
+  }
+  .confern__splide {
+    bottom: -4.0625rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .confern {
+    padding-bottom: 4.0625rem;
+  }
+  .confern__body {
+    .tl1 {
+      text-align: start;
+      margin-bottom: 2.5rem;
+    }
+  }
+  .confern__content {
+    min-height: 29.75rem;
+  }
+  .confern__map {
+    width: 65.625rem;
+    max-width: 65.625rem;
+    transform: translateX(-8%);
+  }
+
+  .confern__splide {
+    width: 15.125rem;
+    bottom: 1rem;
+
+    .splide__slide {
+      border-radius: 0.625rem;
+      padding: 1.25rem 1.5625rem;
+    }
+
+    .arrows__prev {
+      left: -0.4375rem;
+    }
+    .arrows__next {
+      right: -0.4375rem;
+    }
+  }
+  .confern__name {
+    font-size: 0.875rem;
+    margin-bottom: 0.5625rem;
+  }
+
+  .arrows__prev,
+  .arrows__next {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}

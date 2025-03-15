@@ -51,7 +51,7 @@
 @import url('./sections/event/event.scss');
 
 /* Work */
-/* @import url('./sections/work/work.scss'); */
+@import url('./sections/work/confern.scss');
 
 /* Error */
 @import url('./sections/error/error.scss');
