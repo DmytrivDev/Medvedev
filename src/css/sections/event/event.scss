@@ -4,46 +4,339 @@
   align-items: start;
   gap: 0 3.75rem;
 }
-.event__main {
+.event__heading {
+  margin-bottom: 2.5rem;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
 }
 .event__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 .event__type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  li {
+    color: var(--cw);
+    line-height: normal;
+    padding: 0.625rem 1.25rem;
+    border-radius: 6.25rem;
+    background-color: var(--cf);
+  }
 }
 .event__date {
+  color: var(--rce3);
+  line-height: normal;
+  padding: 0.625rem 1.25rem;
+  border-radius: 6.25rem;
+  background-color: var(--ce);
+}
+.event__content {
+  font-size: 1.125rem;
+  line-height: 1.7;
+
+  & > * {
+    margin-top: 0.875rem;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
 }
 .event__img {
+  overflow: hidden;
+  height: 34.5625rem;
+  border-radius: 1.875rem;
+  margin: 1.875rem 0 !important;
+  position: relative;
+  & > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
 }
 .event__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 1.875rem;
+  margin: 1.875rem 0 !important;
+  & > div {
+    position: relative;
+    height: 34.5625rem;
+    overflow: hidden;
+    border-radius: 1.875rem;
+    & > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
 }
 .event__social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+  border-radius: 1.875rem;
+  background-color: var(--ce);
+  padding: 2.5rem 1.875rem;
+  margin: 3.125rem 0 !important;
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  ul {
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3125rem;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.125rem;
+      height: 3.125rem;
+      border: 0.0625rem solid var(--cg);
+      border-radius: 50%;
+      background-color: rgba(58, 181, 74, 0.1);
+      transition: all 0.15s ease-in;
+      span {
+        width: 1.25rem;
+        img {
+          transition: all 0.15s ease-in;
+          width: 100%;
+          filter: brightness(0) saturate(100%) invert(75%) sepia(7%)
+            saturate(6949%) hue-rotate(71deg) brightness(84%) contrast(69%);
+        }
+      }
+      &:hover {
+        background-color: var(--cg);
+        span {
+          img {
+            filter: brightness(0) saturate(100%) invert(98%) sepia(3%)
+              saturate(4%) hue-rotate(238deg) brightness(120%) contrast(100%);
+          }
+        }
+      }
+    }
+  }
 }
-.actions__soc {
-}
+
 .event__aside {
   padding: 3.125rem 3.75rem 3.75rem 3.75rem;
   margin-top: 0.6875rem;
   border-radius: 3.125rem;
   background-color: var(--ce);
 }
-
 .aside__tl {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.625rem;
 }
 .aside__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem 0;
+  margin-bottom: 2.5rem;
   .card-news {
     max-width: 100%;
     .tl3 {
+      font-size: 1.3125rem;
     }
-    .txt-def {
-    }
-    .link-def {
-    }
-    .btn-def {
+  }
+  .card-news__img {
+    height: 16.3125rem;
+    border-radius: 1.25rem;
+  }
+  .card-news__type {
+    li {
+      padding: 0.3125rem 0.75rem;
+      font-size: 0.875rem;
     }
   }
 }
 
-.card-news__img {
+@media screen and (max-width: 768px) {
+  .eventPage {
+    &.pdMain {
+      main,
+      .main {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .event__body {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 5.625rem 0;
+  }
+  .event__heading {
+    h1 {
+      font-size: 1.875rem;
+    }
+  }
+  .event__content {
+    font-size: 1rem;
+
+    & > * {
+      margin-top: 0.75rem;
+    }
+  }
+  .event__img {
+    height: 27.875rem;
+  }
+  .event__images {
+    & > div {
+      height: 27.875rem;
+    }
+  }
+  .event__social {
+    margin: 2.5rem 0 !important;
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .event__aside {
+    position: relative;
+    padding: 5rem 1.25rem 5.3125rem 1.25rem;
+    margin-top: 0;
+    margin: 0 -1.25rem;
+    border-radius: 1.875rem 1.875rem 0 0;
+
+    .btn-def {
+      position: absolute;
+      top: 4.5625rem;
+      right: 1.25rem;
+    }
+  }
+  .aside__tl {
+    padding-right: 12.5rem;
+    font-size: 1.875rem;
+    margin-bottom: 3.125rem;
+  }
+  .aside__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin-bottom: 0;
+    .card-news {
+      max-width: calc((100% - 1 * 1.25rem) / 2);
+      .tl3 {
+        font-size: 1.3125rem;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+    .card-news__img {
+      height: 14.8125rem;
+    }
+    .card-news__type {
+      li {
+        padding: 0.3125rem 0.875rem;
+      }
+    }
+  }
 }
-.card-news__type {
+
+@media screen and (max-width: 365px) {
+  .event__body {
+    gap: 5rem 0;
+  }
+  .event__heading {
+    margin-bottom: 2.125rem;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  .event__actions {
+    gap: 0.625rem;
+  }
+  .event__type {
+    gap: 0.625rem;
+    li {
+      font-size: 0.875rem;
+    }
+  }
+  .event__date {
+    color: var(--rce3);
+    line-height: normal;
+    font-size: 0.875rem;
+  }
+  .event__content {
+    font-size: 0.875rem;
+  }
+  .event__img {
+    height: 12.5rem;
+    border-radius: 1.25rem;
+    margin: 1.25rem 0 !important;
+  }
+  .event__images {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 1.25rem 0 !important;
+    & > div {
+      height: 12.5rem;
+      border-radius: 1.25rem;
+      height: 25.8125rem;
+    }
+  }
+  .event__social {
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 1.25rem;
+    padding: 1.5625rem;
+  }
+
+  .event__aside {
+    padding: 4.375rem 1.25rem 5rem 1.25rem;
+    border-radius: 1.25rem 1.25rem 0 0;
+
+    .btn-def {
+      position: static;
+      top: auto;
+      right: auto;
+    }
+  }
+  .aside__tl {
+    font-size: 1.5rem;
+    padding-right: 0;
+    margin-bottom: 1.875rem;
+  }
+  .aside__cards {
+    flex-direction: column;
+    gap: 1.5625rem 0;
+    margin-bottom: 2.1875rem;
+    .card-news {
+      max-width: 100%;
+      .tl3 {
+        font-size: 1.125rem;
+      }
+    }
+    .card-news__img {
+      height: 13.5625rem;
+    }
+  }
 }
