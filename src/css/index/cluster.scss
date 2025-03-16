@@ -89,9 +89,51 @@
   }
 }
 
+.pagination__wrapp {
+  margin-top: 4.375rem;
+  & > div {
+    display: flex;
+    justify-content: end;
+    .facetwp-pager {
+      display: flex;
+      align-items: center;
+      gap: 0 0.3125rem;
+      .facetwp-page {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3125rem;
+        line-height: normal;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 0.0625rem solid var(--cw);
+        transition: all 0.15s ease-in;
+        &:hover {
+          background-color: transparent;
+          border-color: var(--cg);
+        }
+        &.active {
+          border-color: var(--cg) !important;
+          color: var(--cw) !important;
+          background-color: var(--cg) !important;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .breadcrumbs {
     padding: 1.5625rem 0;
+  }
+
+  .pagination__wrapp {
+    margin-top: 3.5rem;
+    & > div {
+      justify-content: center;
+    }
   }
 }
 
@@ -112,5 +154,22 @@
   .arrows__next {
     width: 3.125rem;
     height: 3.125rem;
+  }
+
+  .pagination__wrapp {
+    margin-bottom: 2.25rem;
+    & > div {
+      .facetwp-pager {
+        gap: 0;
+        .facetwp-page {
+          width: 2.8125rem;
+          height: 2.8125rem;
+          &:hover {
+            background-color: transparent;
+            border-color: transparent;
+          }
+        }
+      }
+    }
   }
 }

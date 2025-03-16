@@ -43,7 +43,10 @@ cards?.forEach((card, index) => {
 
 window.addEventListener('resize', () => {
   const modal = document.getElementById('idDetails');
-  if (window.innerWidth > 768) {
-    closeModal(modal);
+  if (modal) {
+    const opened = modal.classList.contains('isOpened');
+    if (opened && window.innerWidth > 768) {
+      closeModal(modal);
+    }
   }
 });
