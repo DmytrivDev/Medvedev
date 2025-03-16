@@ -9,3 +9,4 @@ import './parts/clipboard.js';
 import './parts/modal.js';
 import './parts/splide.js';
 import './parts/splidecust.js';
+import './parts/details.js';
