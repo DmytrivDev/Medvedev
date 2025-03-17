@@ -9,6 +9,7 @@ function initTalent() {
     const spans = title.querySelectorAll('span');
 
     window.addEventListener('scroll', () => {
+      const headerHeight = document.querySelector('.header').offsetHeight;
       const sectionRect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
@@ -16,7 +17,7 @@ function initTalent() {
       // і 1 коли низ секції торкається нижнього краю екрану
       const progress = Math.min(
         Math.max(
-          (windowHeight - sectionRect.bottom + 100) /
+          (windowHeight - sectionRect.bottom + headerHeight) /
             (windowHeight - sectionRect.height),
           0
         ),

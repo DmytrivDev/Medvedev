@@ -1,8 +1,7 @@
 const parallaxSections = document.querySelectorAll('.prllx');
 
 function applyParallaxEffect() {
-  const headerHeight =
-    document.querySelector('.header__main')?.offsetHeight || 0;
+  const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
 
   parallaxSections.forEach(section => {
     const parallaxBox = section.querySelector('.prllx-box');
