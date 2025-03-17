@@ -5,6 +5,7 @@ const burger = document.querySelector('.burger');
 const mobMenu = document.querySelector('.mobmenu');
 const mobMenuBody = document.querySelector('.mobmenu__body');
 const mobNavLinks = document.querySelectorAll('.mobmenu .navmenu__list a');
+const mobAnchorLinks = document.querySelectorAll('.mobmenu .anchor');
 
 let isMenuOpened = false;
 
@@ -45,6 +46,13 @@ function initMenu() {
     burger.addEventListener('click', toggleMenu);
   }
 
+  if (mobAnchorLinks) {
+    mobAnchorLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+  }
   if (mobNavLinks) {
     mobNavLinks.forEach(link => {
       link.addEventListener('click', event => {

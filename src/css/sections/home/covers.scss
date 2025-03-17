@@ -1,8 +1,10 @@
 .covers {
-  .tl1 {
-    line-height: 1.4;
-    span {
-      opacity: 0.4;
+  .heading {
+    .tl1 {
+      line-height: 1.4;
+      span {
+        opacity: 0.4;
+      }
     }
   }
 }
@@ -20,9 +22,11 @@
 
 @media screen and (max-width: 365px) {
   .covers {
-    .tl1 {
-      span {
-        font-size: 1.125rem;
+    .heading {
+      .tl1 {
+        span {
+          font-size: 1.125rem;
+        }
       }
     }
   }
