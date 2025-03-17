@@ -5,6 +5,7 @@ import './parts/parallax.js';
 import './parts/manif.js';
 import './parts/mapworld.js';
 import './parts/scroll.js';
+import './parts/title.js';
 import './parts/forms.js';
 import './parts/tools.js';
 import './parts/clipboard.js';

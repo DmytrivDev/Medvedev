@@ -16,7 +16,7 @@ function animateCountries() {
   const sectionCenter = sectionRect.top + sectionRect.height / 2;
 
   if (
-    sectionCenter <= viewportCenter - headerHeight &&
+    sectionCenter - headerHeight <= viewportCenter &&
     sectionCenter - headerHeight >= 0
   ) {
     animationTriggered = true;
