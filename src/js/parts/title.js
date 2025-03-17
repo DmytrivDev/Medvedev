@@ -1,8 +1,6 @@
 function initTalent() {
   const section = document.querySelector('.covers');
 
-  let delay = 0;
-
   if (section) {
     const title = document.querySelector('.heading .tl1 > span');
     const letters = title.textContent.split(''); // Розбиваємо текст на букви
@@ -13,13 +11,6 @@ function initTalent() {
     window.addEventListener('scroll', () => {
       const sectionRect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-
-      if (section?.classList.contains('noAnim')) {
-        setTimeout(() => {
-          delay = 300;
-          section.classList.remove('noAnim');
-        }, 100);
-      }
 
       // Обчислюємо прогрес скролу: 0 коли верх секції торкається верхнього краю екрану,
       // і 1 коли низ секції торкається нижнього краю екрану
@@ -38,9 +29,9 @@ function initTalent() {
       // Замальовуємо відповідну кількість букв
       spans.forEach((span, index) => {
         if (index >= spans.length - lettersToPaint) {
-          span.style.color = '#CDCDCD'; // Замальовуємо в чорний
+          span.style.color = 'rgba(255, 255, 255, 0.4)'; // Повертаємо в сірий
         } else {
-          span.style.color = '#191919'; // Повертаємо в сірий
+          span.style.color = '#fff'; // Замальовуємо в чорний
         }
       });
     });

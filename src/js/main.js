@@ -2,7 +2,6 @@ import './parts/lockscroll.js';
 import './parts/mobmenu.js';
 import './parts/navigation.js';
 import './parts/parallax.js';
-import './parts/manif.js';
 import './parts/mapworld.js';
 import './parts/scroll.js';
 import './parts/title.js';
