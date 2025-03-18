@@ -42,7 +42,7 @@ function setFooterNavMinHeight() {
 
   if (!footerNav || footerSubMenu.length === 0 || !footerList) return;
 
-  if (window.innerWidth > 365) {
+  if (window.innerWidth > 480) {
     const maxSubMenuHeightPx = Math.max(
       ...[...footerSubMenu].map(menu => menu.offsetHeight)
     );
