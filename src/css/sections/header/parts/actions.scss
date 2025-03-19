@@ -19,58 +19,68 @@
         img {
           transition: all 0.15s ease-in;
           width: 100%;
-          filter: brightness(0) saturate(100%) invert(75%) sepia(7%)
-            saturate(6949%) hue-rotate(71deg) brightness(84%) contrast(69%);
+          filter: brightness(0) saturate(100%) invert(75%) sepia(7%) saturate(6949%) hue-rotate(71deg) brightness(84%)
+            contrast(69%);
         }
       }
       &:hover {
         background-color: var(--cg);
         span {
           img {
-            filter: brightness(0) saturate(100%) invert(98%) sepia(3%)
-              saturate(4%) hue-rotate(238deg) brightness(120%) contrast(100%);
+            filter: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(4%) hue-rotate(238deg) brightness(120%)
+              contrast(100%);
           }
         }
       }
     }
   }
-  .actions__lang {
-    flex-shrink: 0;
+}
+
+.actions__lang {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0 0.875rem;
+  margin-left: 2.5rem;
+  & > li,
+  & > li > a {
     display: flex;
     align-items: center;
-    gap: 0 0.875rem;
-    margin-left: 2.5rem;
-    & > li {
-      display: flex;
-      align-items: center;
-      gap: 0 0.4375rem;
-      &.current-lang {
-        a {
-          color: var(--cm);
-        }
-        & > span {
-          display: block;
-        }
-      }
-      & > span {
-        display: none;
-        flex-shrink: 0;
-        width: 1.0625rem;
-        img {
-          width: 100%;
-        }
-      }
-    }
-    a {
-      display: block;
-      color: rgba(6, 8, 19, 0.6);
-      font-size: 0.875rem;
-      font-weight: 600;
-      line-height: normal;
-      transition: all 0.15s ease-in;
-      &:hover {
+    gap: 0 0.4375rem;
+    &.current-lang {
+      a {
         color: var(--cm);
       }
+      & > span,
+      & > a > img,
+      & span > img {
+        display: block !important;
+      }
+    }
+    & > span:first-child {
+      display: none;
+      flex-shrink: 0;
+      width: 1.0625rem;
+      img {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+    img {
+      width: 1.0625rem !important;
+      height: auto !important;
+      display: none;
+    }
+  }
+  a {
+    display: block;
+    color: rgba(6, 8, 19, 0.6);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: normal;
+    transition: all 0.15s ease-in;
+    &:hover {
+      color: var(--cm);
     }
   }
 }
@@ -87,39 +97,19 @@
 
   .header__bottom {
     .actions__lang {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 0 0.875rem;
-      margin-left: 2.5rem;
       & > li {
-        display: flex;
-        align-items: center;
-        gap: 0 0.4375rem;
         &.current-lang {
           a {
             opacity: 1;
-          }
-          & > span {
-            display: block;
-          }
-        }
-        & > span {
-          display: none;
-          flex-shrink: 0;
-          width: 1.0625rem;
-          img {
-            width: 100%;
+            color: var(--cw);
           }
         }
       }
       a {
-        display: block;
+        color: var(--cw);
         font-size: 0.875rem;
         font-weight: 600;
-        line-height: normal;
         opacity: 0.6;
-        transition: all 0.15s ease-in;
       }
     }
   }
@@ -157,47 +147,31 @@
           width: 1.25rem;
           img {
             width: 100%;
-            filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
-              saturate(2%) hue-rotate(310deg) brightness(102%) contrast(104%);
+            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(310deg) brightness(102%)
+              contrast(104%);
           }
         }
       }
     }
     .actions__lang {
       color: var(--cw);
-      display: flex;
-      align-items: center;
+      margin: 0;
       justify-content: center;
-      gap: 0 0.875rem;
       margin-top: 3.125rem;
       & > li {
-        display: flex;
-        align-items: center;
-        gap: 0 0.4375rem;
         &.current-lang {
           a {
             opacity: 1;
+            color: var(--cw);
           }
           & > span {
             display: block;
           }
         }
-        & > span {
-          display: none;
-          flex-shrink: 0;
-          width: 1.0625rem;
-          img {
-            width: 100%;
-          }
-        }
       }
       a {
-        display: block;
-        font-size: 0.875rem;
-        font-weight: 600;
-        line-height: normal;
+        color: var(--cw);
         opacity: 0.6;
-        transition: all 0.15s ease-in;
       }
     }
   }
