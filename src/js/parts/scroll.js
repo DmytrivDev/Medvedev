@@ -18,6 +18,10 @@ anchorLinks?.forEach(link => {
           ease: 'inOutQuint', // Плавность анимации
           duration: 1000, // Длительность анимации (мс)
         });
+      } else {
+        var lang = document.querySelector('html').getAttribute('lang').slice(0, 2);
+        lang = lang != 'uk' ? lang + '/' : '';
+        window.location = '/' + lang + href;
       }
     }
   });
